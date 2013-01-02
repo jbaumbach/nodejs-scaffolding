@@ -5,3 +5,6 @@ body {
 a {
   color: #00b7ff;
 }
+.userinfo {
+  border: 1px #f00;
+}
