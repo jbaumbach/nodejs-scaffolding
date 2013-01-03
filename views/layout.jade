@@ -2,8 +2,16 @@ doctype 5
 html
   head
     title= title
+      |  - Great Site
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
       h1 Great Site
-    block content
+    .container
+      .main-content
+        //- Your subclass should define "content" and "sidebar"
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Site built with Node.js, Express, Jade, Stylus

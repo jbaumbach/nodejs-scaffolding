@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form(method='post')
+    ul
+      li
+        label(for='userId') User ID
+        input(name='userId')
+      li
+        label(for='password') Password
+        input(name='password', type='password')
+      li
+        input(type='submit', value='Login')

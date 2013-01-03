@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  form(method='post', action='/users/')
+    ul
+      li
+        label(for='name') Name
+        input(name='name')
+      li
+        label(for='addr') Address
+        input(name='addr')
+      li 
+        label(for='pw1') Password
+        input(type='password', name='pw1')
+      li
+        label(for='pw2') Re-enter
+        input(type='password', name='pw2')
+      li
+        label(for='email') Email
+        input(name='email', type='email')
+      li
+        input(type='submit', value='Boom')
