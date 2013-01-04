@@ -5,18 +5,18 @@ block content
     ul
       li
         label(for='name') Name
-        input(name='name')
+        input(name='name', value=user.name)
       li
         label(for='addr') Address
-        input(name='addr')
-      li 
-        label(for='pw1') Password
-        input(type='password', name='pw1')
-      li
-        label(for='pw2') Re-enter
-        input(type='password', name='pw2')
+        input(name='addr', value=user.address)
       li
         label(for='email') Email
-        input(name='email', type='email')
+        input(name='email', type='email', value=user.email)
+      li 
+        label(for='pw1') Password
+        input(type='password', name='pw1', value=user.password)
+      li
+        label(for='pw2') Re-enter
+        input(type='password', name='pw2', value=user.password)
       li
         input(type='submit', value='Boom')

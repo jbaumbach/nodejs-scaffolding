@@ -17,13 +17,30 @@ global-reset()
  * Store the main color and
  * background color as variables
  */
-main-color = #fa5b4d
-background-color = #faf9f0
+ 
+/* Orig
+ * main-color = #fa5b4d
+ * background-color = #faf9f0
+  body color #444
+  
+  Colors below: http://colorschemedesigner.com/#3.22wf7rwVjiB
+ */
+
+main-color = #50708E
+background-color = #031B34
+text-color = white
+link-color = #50708E
+
+a:link, a:visited 
+  color link-color
+  text-decoration none
+a:hover
+  text-decoration underline
 
 body
   font-family 'Georgia'
   background-color background-color
-  color #444
+  color text-color
 
 header
   font-family 'Quicksand'
@@ -51,7 +68,11 @@ header
 
   p
     margin-bottom 20px
-
+  ul
+    label
+      float left
+      width 100px
+      
 .sidebar
   float left
   width 200px

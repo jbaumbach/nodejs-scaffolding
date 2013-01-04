@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77584a93-bd42-4666-94bd-2490ca1fea44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/connectors/mongo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/drivers/mongoUserManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/userManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/userAddEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/userLogin.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/drivers/mongoUserManager.js" afterPath="$PROJECT_DIR$/data/drivers/mongoUserManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.styl" afterPath="$PROJECT_DIR$/public/stylesheets/style.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/userAddEdit.jade" afterPath="$PROJECT_DIR$/views/userAddEdit.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/userLogin.jade" afterPath="$PROJECT_DIR$/views/userLogin.jade" />
     </list>
     <ignored path="rolodex-site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,15 +28,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5743315">
+    <splitter split-orientation="vertical" split-proportion="0.58561295">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5481112">
+        <splitter split-orientation="horizontal" split-proportion="0.51817536">
           <split-first>
             <leaf>
               <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="26" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+                    <state line="67" column="33" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -57,10 +53,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="mongoUserManager.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="mongoUserManager.js" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/data/drivers/mongoUserManager.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="41" column="2" selection-start="1012" selection-end="1012" vertical-scroll-proportion="1.2621951">
+                    <state line="37" column="0" selection-start="895" selection-end="923" vertical-scroll-proportion="1.4804804">
                       <folding>
                         <element signature="e#0#59#0" expanded="false" />
                       </folding>
@@ -95,16 +91,16 @@
               <file leaf-file-name="style.styl" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="64" column="7" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+                    <state line="74" column="6" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/routes/user.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="16" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.5304878">
+                    <state line="38" column="3" selection-start="696" selection-end="696" vertical-scroll-proportion="1.4366198">
                       <folding />
                     </state>
                   </provider>
@@ -119,7 +115,7 @@
           <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/layout.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="11" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
+                <state line="8" column="9" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -128,7 +124,7 @@
           <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/index.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="202" vertical-scroll-proportion="0.0">
+                <state line="10" column="21" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -137,7 +133,7 @@
           <file leaf-file-name="userLogin.jade" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/userLogin.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="8" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0">
+                <state line="14" column="24" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -146,7 +142,7 @@
           <file leaf-file-name="userAddEdit.jade" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/userAddEdit.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="42" selection-start="386" selection-end="386" vertical-scroll-proportion="1.0126582">
+                <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="1.1632653">
                   <folding />
                 </state>
               </provider>
@@ -168,25 +164,25 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
         <option value="$PROJECT_DIR$/data/connectors/mongo.js" />
         <option value="$PROJECT_DIR$/data/dbFactory.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/data/userManager.js" />
-        <option value="$PROJECT_DIR$/views/userLogin.jade" />
-        <option value="$PROJECT_DIR$/views/userAddEdit.jade" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/views/userLogin.jade" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
+        <option value="$PROJECT_DIR$/views/userAddEdit.jade" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/data/drivers/mongoUserManager.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="200" />
+    <option name="x" value="409" />
     <option name="y" value="22" />
-    <option name="width" value="1721" />
-    <option name="height" value="1056" />
+    <option name="width" value="1510" />
+    <option name="height" value="1108" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -385,7 +381,11 @@
       <created>1357167917701</created>
       <updated>1357167917701</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added login and user routes, database abstraction, some styling.&#10;Todo: implement remainder of routes, create a dbFactory class">
+      <created>1357181369005</created>
+      <updated>1357181369005</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -409,14 +409,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="200" y="22" width="1721" height="1056" extended-state="0" />
+    <frame x="409" y="22" width="1510" height="1108" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928064" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1737338" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19838601" sideWeight="0.6707193" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -500,30 +500,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="7" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="202" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -537,20 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/userLogin.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/userAddEdit.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="386" selection-end="386" vertical-scroll-proportion="1.0126582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/userManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="1" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
@@ -560,26 +525,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/userLogin.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="24" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="6" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
+        <state line="67" column="33" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/userAddEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="1.1632653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="3" selection-start="696" selection-end="696" vertical-scroll-proportion="1.4366198">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/drivers/mongoUserManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="2" selection-start="1012" selection-end="1012" vertical-scroll-proportion="1.2621951">
+        <state line="37" column="0" selection-start="895" selection-end="923" vertical-scroll-proportion="1.4804804">
           <folding>
             <element signature="e#0#59#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.5304878">
-          <folding />
         </state>
       </provider>
     </entry>

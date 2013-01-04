@@ -37,6 +37,6 @@ exports.upsertUser = function(user, resultCallback) {
   throw 'Not implemented!';
 };
 
-exports.validateCredentials = function(id, password) {
+exports.validateCredentials = function(id, password, resultCallback) {
   throw 'Not implemented!';
 };

@@ -19,7 +19,12 @@ exports.login = function(req, res) {
 exports.new = function(req, res) {
   var pageVars = {
     title: 'New User',
-    user: {}
+    user: {
+      name: '',
+      address: '',
+      email: '',
+      password: ''
+    }
   };
   res.render('userAddEdit', pageVars);
 }
@@ -29,5 +34,7 @@ exports.detail = function(req, res) {
 }
 
 exports.upsert = function(req, res) {
+  // todo: check if we have a logged in user.  If so,
+  // that's what we update.  Otherwise, insert.
   throw 'Not implemented!';
 }
