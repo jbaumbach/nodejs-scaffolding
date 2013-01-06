@@ -9,7 +9,11 @@ html
       h1 Great Site
     .container
       .main-content
-        //- Your subclass should define "content" and "sidebar"
+        - if (locals.message) 
+          p.message #{ locals.message }
+        - if (locals.error)
+          p.error #{ locals.error }
+        //- Your subclass should define "content" and optionally "sidebar"
         block content
       .sidebar
         block sidebar

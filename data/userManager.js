@@ -16,6 +16,6 @@ exports.upsertUser = function(user, resultCallback) {
   db.upsertUser(user, resultCallback);
 }
 
-exports.validateCredentials = function(id, password) {
-  db.validateCredentials(id, password);
+exports.validateCredentials = function(email, password, resultCallback) {
+  db.validateCredentials(email, password, resultCallback);
 }

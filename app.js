@@ -58,11 +58,12 @@ app.configure('development', function(){
 });
 
 //
-// todo: add routes here
+// Routing table for your app
 //
 app.get('/', routes.index);
 app.get('/login', user.loginForm);
 app.post('/login', user.login);
+app.get('/logout', user.logout);
 app.get('/users/new', user.new);
 app.get('/users/:id', user.detail);
 app.post('/users/', user.upsert);

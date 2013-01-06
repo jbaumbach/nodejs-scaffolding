@@ -1,0 +1,10 @@
+- if (locals.user.id)
+  h1 #{ locals.user.name }'s Profile
+    p
+      a(href='/users/#{ locals.user.id }') Edit
+      |  | 
+      a(href='/logout') Logout
+- else
+  h1 Profile
+  p
+    a(href='/login') Please log in

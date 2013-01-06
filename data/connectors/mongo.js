@@ -4,8 +4,9 @@
  * Time: 4:16 PM
  */
 
-var util = require('util'),
-  mongodb = require('mongodb');
+var util = require('util')
+  , mongodb = require('mongodb')
+  ;
 
 //
 // MongoDb connection parameters
@@ -14,7 +15,7 @@ var util = require('util'),
 var dbServerHostname = 'localhost';
 var dbServerPort = 27017;
 var dbServerOptions = { auto_reconnect: true };
-var dbConnectionOptions = { w: 1 };   // Acknowledge when written to mongodb journal
+var dbConnectionOptions = { w: 1 };   // "writeconcern", acknowledge when written to mongodb journal
 var dbName = 'nodeRolodexSample';
 
 //
@@ -25,7 +26,7 @@ var db = new mongodb.Db(dbName, server, dbConnectionOptions);
 
 db.open(function(err, db) {
   //
-  // Note: 'db' intentionally ignored
+  // Note: 'db' parameter intentionally ignored
   // 
   if (err) {
     console.log('MongoDB connection failed! ' + err);
