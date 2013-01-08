@@ -27,10 +27,14 @@ exports.login = function(req, res) {
       res.redirect('/');
     } else {
       //
-      // Oops, something went wrong.  Login is a post but doesn't affect the database, so 
-      // ok to re-render the page with the existing post data.
+      // Oops, something went wrong.  Login is a post, but doesn't affect the database, so 
+      // ok to re-render the page with the existing post data rather than our usual
+      // redirect nonsense.
       //
-      res.render('userLogin', { title: 'User Login', message: 'Incorrect email or password' });
+      var todoAfterAShortDelay = function() {
+        res.render('userLogin', { title: 'User Login', error: 'Incorrect email or password3' });
+      };
+      setTimeout(todoAfterAShortDelay, 800);
     }
   })
 }
