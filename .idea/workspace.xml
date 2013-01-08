@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="77584a93-bd42-4666-94bd-2490ca1fea44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.styl" afterPath="$PROJECT_DIR$/public/stylesheets/style.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/globalfunctions.js" afterPath="$PROJECT_DIR$/common/globalfunctions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
     </list>
     <ignored path="rolodex-site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,24 +23,24 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.674548">
+    <splitter split-orientation="vertical" split-proportion="0.76145554">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.37621698">
+        <splitter split-orientation="horizontal" split-proportion="0.4367177">
           <split-first>
             <leaf>
-              <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="52" column="22" selection-start="1301" selection-end="1301" vertical-scroll-proportion="1.7180617">
+                    <state line="52" column="22" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="mongoUserManager.js" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="mongoUserManager.js" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/data/drivers/mongoUserManager.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="83" column="7" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.0">
+                    <state line="44" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.33397684">
                       <folding />
                     </state>
                   </provider>
@@ -61,19 +59,19 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
+              <file leaf-file-name="user.js" pinned="false" current="true" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/routes/user.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="10" column="18" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+                    <state line="91" column="0" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.36723164">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/routes/index.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="25" column="22" selection-start="569" selection-end="569" vertical-scroll-proportion="0.8029979">
+                    <state line="22" column="37" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -82,7 +80,7 @@
               <file leaf-file-name="globalfunctions.js" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/common/globalfunctions.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="18" column="5" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+                    <state line="45" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -133,7 +131,7 @@
           <file leaf-file-name="userAddEdit.jade" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/userAddEdit.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="0.9859155">
+                <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="1.4093959">
                   <folding />
                 </state>
               </provider>
@@ -170,13 +168,13 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/userLogin.jade" />
         <option value="$PROJECT_DIR$/data/connectors/mongo.js" />
-        <option value="$PROJECT_DIR$/common/globalfunctions.js" />
         <option value="$PROJECT_DIR$/data/drivers/mongoUserManager.js" />
         <option value="$PROJECT_DIR$/data/userManager.js" />
         <option value="$PROJECT_DIR$/views/includes/userWidget.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
+        <option value="$PROJECT_DIR$/common/globalfunctions.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
       </list>
     </option>
@@ -379,16 +377,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="215" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="217" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="221" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="215" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="221" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1015" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1019" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1015" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="221" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="217" />
@@ -459,7 +457,11 @@
       <created>1357511542734</created>
       <updated>1357511542734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Got login/logout working.  Next work on edit and unit testing.">
+      <created>1357630462126</created>
+      <updated>1357630462126</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -486,6 +488,7 @@
     <frame x="2" y="22" width="1721" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20641711" sideWeight="0.98771816" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -499,7 +502,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -567,7 +569,7 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -604,20 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/userManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/drivers/mongoUserManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="7" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="9" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
@@ -648,35 +636,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/userAddEdit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="0.9859155">
+        <state line="19" column="62" selection-start="566" selection-end="566" vertical-scroll-proportion="1.4093959">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="22" selection-start="1301" selection-end="1301" vertical-scroll-proportion="1.7180617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/globalfunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+        <state line="52" column="22" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="569" selection-end="569" vertical-scroll-proportion="0.8029979">
+        <state line="22" column="37" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/userManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/globalfunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/drivers/mongoUserManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.33397684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.36723164">
           <folding />
         </state>
       </provider>

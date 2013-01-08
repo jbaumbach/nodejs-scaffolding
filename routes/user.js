@@ -16,7 +16,7 @@ exports.loginForm = function(req, res) {
 
 exports.login = function(req, res) {
   var email = req.body.email;
-  var password = req.body.password;
+  var password = globalfunctions.hashPassword(req.body.password);
   
   userManager.validateCredentials(email, password, function(user) {
     if (user) {
@@ -64,6 +64,8 @@ exports.detail = function(req, res) {
   userManager.getUser(sessionInfo.userId, function(user) {
     if (user) {
       if (sessionInfo.userId === requestedUserId) {
+        // Must reenter password in this version of the site.
+        user.password = '';
         var pageVars = {
           title: 'Edit Profile',
           user: user
@@ -72,7 +74,7 @@ exports.detail = function(req, res) {
         res.render('userAddEdit', pageVars);
         
       } else {
-        throw 'Viewing other users not implemented yet';
+        throw 'Viewing other users not implemented';
       }
       
     } else {
@@ -84,13 +86,17 @@ exports.detail = function(req, res) {
 exports.upsert = function(req, res) {
 
   //
+  // Todo: sanitize user input here via whitelist
+  //
+
+  //
   // Create a user object from the submitted form values
   //
   var user = {
     name: req.body.name,
     address: req.body.addr,
     email: req.body.email,
-    password: req.body.pw1
+    password: globalfunctions.hashPassword(req.body.pw1)
   }
 
   //

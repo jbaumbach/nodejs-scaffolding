@@ -38,3 +38,12 @@ exports.loginUser = function(req, userId) {
 exports.logoutUser = function(req) {
   this.setSessionInfo(req, null);
 }
+
+exports.hashPassword = function(password) {
+  var crypto = require('crypto');
+  var salt = 'put_your_salt_here';
+
+  var result = crypto.createHash('sha256').update(salt + password).digest('hex');
+
+  return result;
+}
