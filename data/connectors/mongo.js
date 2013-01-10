@@ -19,6 +19,11 @@ var dbConnectionOptions = { w: 1 };   // "writeconcern", acknowledge when writte
 var dbName = 'nodeRolodexSample';
 
 //
+// Current status of the connection
+//
+var dbConnected = false;
+
+//
 // Connect to the MongoDb server
 // 
 var server = new mongodb.Server(dbServerHostname, dbServerPort, dbServerOptions);
@@ -32,11 +37,31 @@ db.open(function(err, db) {
     console.log('MongoDB connection failed! ' + err);
   } else {
     console.log(util.format('MongoDB connection opened: %s:%d/%s', dbServerHostname, dbServerPort, dbName));
+    dbConnected = true;
   }
 });
 
 // todo: authenticate here as well
 
+//
+// Main export: the global database connection.  If we're not connected, throw 
+// an error.
+//
 module.exports = function() {
-  return db;
+  if (!dbConnected) {
+    throw 'DB connection not established - please try again later';    
+  } else {
+    return db;
+  }
+}
+
+//
+// Close the connection
+//
+module.exports.close = function() {
+  if (dbConnected) {
+    db.close();
+    dbConnected = false;
+    console.log('MongoDb connection closed');
+  }
 }

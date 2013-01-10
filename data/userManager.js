@@ -19,3 +19,7 @@ exports.upsertUser = function(user, resultCallback) {
 exports.validateCredentials = function(email, password, resultCallback) {
   db.validateCredentials(email, password, resultCallback);
 }
+
+exports.deleteUser = function(id, resultCallback) {
+  db.deleteUser(id, resultCallback);
+}

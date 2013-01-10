@@ -19,6 +19,7 @@ exports.login = function(req, res) {
   var password = globalfunctions.hashPassword(req.body.password);
   
   userManager.validateCredentials(email, password, function(user) {
+    
     if (user) {
       //
       // User validated successfully
@@ -86,7 +87,7 @@ exports.detail = function(req, res) {
 exports.upsert = function(req, res) {
 
   //
-  // Todo: sanitize user input here via whitelist
+  // Todo: sanitize user input here via https://github.com/chriso/node-validator
   //
 
   //

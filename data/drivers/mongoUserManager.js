@@ -84,3 +84,17 @@ exports.validateCredentials = function(email, password, resultCallback) {
     });
   });
 };
+
+//
+// Delete a user
+//
+exports.deleteUser = function(id, resultCallback) {
+  db().collection('user', function(err, collection) {
+    
+    var findSelector = { _id: mongodb.ObjectID(id) };
+
+    collection.remove(findSelector, function(err) {
+      resultCallback(null);
+    });
+  });
+};
