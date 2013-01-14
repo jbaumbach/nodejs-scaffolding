@@ -6,6 +6,7 @@
 var userManager = require('./../data/userManager');
 var util = require('util');
 var globalfunctions = require('./../common/globalfunctions');
+var User = require('./../models/user');
 
 exports.loginForm = function(req, res) {
   var pageVars = {
@@ -49,12 +50,7 @@ exports.logout = function(req, res) {
 exports.new = function(req, res) {
   var pageVars = {
     title: 'New User',
-    user: {
-      name: '',
-      address: '',
-      email: '',
-      password: ''
-    }
+    user: new User()
   };
   res.render('userAddEdit', pageVars);
 }
@@ -66,7 +62,9 @@ exports.detail = function(req, res) {
   userManager.getUser(sessionInfo.userId, function(user) {
     if (user) {
       if (sessionInfo.userId === requestedUserId) {
+        //
         // Must reenter password in this version of the site.
+        //
         user.password = '';
         var pageVars = {
           title: 'Edit Profile',
@@ -86,7 +84,7 @@ exports.detail = function(req, res) {
 }
 
 exports.upsert = function(req, res) {
-
+  
   //
   // Todo: sanitize user input here via https://github.com/chriso/node-validator
   //
@@ -94,12 +92,12 @@ exports.upsert = function(req, res) {
   //
   // Create a user object from the submitted form values
   //
-  var user = {
+  var user = new User({
     name: req.body.name,
     address: req.body.addr,
     email: req.body.email,
     password: globalfunctions.hashPassword(req.body.pw1)
-  }
+  });
 
   //
   // If the user is logged in, this is an update.  Add the current 

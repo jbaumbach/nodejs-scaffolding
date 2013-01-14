@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/rolodex-site.iml" filepath="$PROJECT_DIR$/.idea/rolodex-site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/scaffolding.iml" filepath="$PROJECT_DIR$/.idea/scaffolding.iml" />
     </modules>
   </component>
 </project>
