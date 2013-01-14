@@ -1,19 +1,26 @@
-/**
- * User: jbaumbach
- * Date: 1/8/13
- * Time: 10:04 PM
+/*
+
+  Test the user manager functions.  Although it tests your database functionality, it
+  should be completely agnostic of your chosen database.  This allows you to swap in and out
+  database technologies pretty easily without having to refactor your code.
+  
+  At this time, however, using MongoDb requires a little bit of db-specific futzing to work.
+  
+  Todo: move the db object to an agnostic class that does the connecting/deconnecting/waiting.
+
  */
-
-
 var assert = require('assert');
 var userManager = require('../../data/userManager');
-var globalfunctions = require('../../common/globalfunctions');
 var db = require('../../data/connectors/mongo');
 
-var existingUserId = '50ebd8a279ef10b28cf6df85';
-var existingUserName = 'John Baumbach';
-var existingUserEmail = 'john.j.baumbach@gmail.com';
-var existingUserPW = 'hello';
+//
+// For the "existing user" test(s) to work, create this user in your interface so it 
+// saves to the database.  Then set the fields here, especially the user id.
+//
+var existingUserId = '50f1ebc3dd71688aad448b62';
+var existingUserName = 'Thomas Anderson';
+var existingUserEmail = 'neo@thematrix.com';
+var existingUserPW = 'neo123';
 
 //
 // Delay to let db connection start.  This seems to be about right.  Any less, the tests will fail.
@@ -21,7 +28,8 @@ var existingUserPW = 'hello';
 var connectionWaitTimeMs = 500;
 
 //
-// Mongo takes a while to connect to, and all queries sent before connection will timeout.
+// Mongo takes a while to connect, and all queries sent before the connection is made will timeout,
+// and bomb out our tests.
 //
 describe('userManager', function() {
   //
@@ -31,7 +39,7 @@ describe('userManager', function() {
   
   //
   // Tests should close the database connection when done so we don't run out of connections.
-  // But don't blow out other tests that might be running.  To ponder a better solution.
+  // But don't blow out other tests that might be running.  To ponder: a better solution.
   //
   after(function() {
     setTimeout(function() {
@@ -39,7 +47,12 @@ describe('userManager', function() {
     }, 8000);
   })
   
-  it('should simply get a user', function(done) {
+  //
+  // If you don't have the above existing user created, these tests will fail.  I recommend
+  // keeping these to keep a safety net of regression tests around in case you forget something
+  // when you're refactoring your db in the future.
+  // 
+  it('(optionally) should get an existing user', function(done) {
     
     //
     // Mongo seems to take a while to connect, so let's wait a couple secs before
@@ -54,13 +67,16 @@ describe('userManager', function() {
     
   });
 
-  it('should fail with wrong password', function(done) {
+  it('(optionally) should fail with wrong password for an existing user', function(done) {
     userManager.validateCredentials(existingUserEmail, 'badpassword', function(nouser) {
       assert.equal(nouser, undefined);
       done();
     })
   });
   
+  //
+  // This tests the full cycle of CRUD actions, and cleans up afterwards.
+  //
   it('should insert, get, update, validate, then delete a user', function(done) {
     var user = {
       name: 'Darth',

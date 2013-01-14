@@ -1,3 +1,8 @@
+//-
+//- The layout of the app.  The layout describes how the a group of pages will look.  This is similar
+//- to the "Master Page" pattern in .NET.  Your individual .jade pages will define the content
+//- that plugs into the "block" sections in this file.
+//-
 doctype 5
 html
   head
@@ -9,13 +14,23 @@ html
       h1 Great Site
     .container
       .main-content
+        //-
+        //- If we have a message passed to us, let's display it.  This is an example of scripting
+        //- in Jade.
+        //-
         - if (locals.message) 
           p.message #{ locals.message }
+        //-
+        //- If we have an error message, let's display it.
+        //-
         - if (locals.error)
           p.error #{ locals.error }
+        
+        //-
         //- Your subclass should define "content" and optionally "sidebar"
+        //-
         block content
       .sidebar
         block sidebar
     footer
-      p Built with Node.js, Express, Jade, Stylus, MongoDB, and Reddis
+      p Built with Node.js, Express, Jade, Stylus, Nib, MongoDB, and Reddis.  Tested with Mocha and Supertest.

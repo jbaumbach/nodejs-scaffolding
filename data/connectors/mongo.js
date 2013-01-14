@@ -1,7 +1,7 @@
-/**
- * User: jbaumbach
- * Date: 1/2/13
- * Time: 4:16 PM
+/*
+
+  Low level support of the MongoDb database connection.
+
  */
 
 var util = require('util')
@@ -15,7 +15,7 @@ var util = require('util')
 var dbServerHostname = 'localhost';
 var dbServerPort = 27017;
 var dbServerOptions = { auto_reconnect: true };
-var dbConnectionOptions = { w: 1 };   // "writeconcern", acknowledge when written to mongodb journal
+var dbConnectionOptions = { w: 1 };   // "writeconcern"; acknowledge when written to mongodb journal
 var dbName = 'nodeRolodexSample';
 
 //
@@ -31,7 +31,7 @@ var db = new mongodb.Db(dbName, server, dbConnectionOptions);
 
 db.open(function(err, db) {
   //
-  // Note: 'db' parameter intentionally ignored
+  // Note: 'db' return parameter intentionally ignored
   // 
   if (err) {
     console.log('MongoDB connection failed! ' + err);
@@ -49,7 +49,7 @@ db.open(function(err, db) {
 //
 module.exports = function() {
   if (!dbConnected) {
-    throw 'DB connection not established - please try again later';    
+    throw 'DB connection not ready - please try again later';    
   } else {
     return db;
   }

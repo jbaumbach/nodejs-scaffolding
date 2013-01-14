@@ -1,24 +1,16 @@
-/**
- * User: jbaumbach
- * Date: 1/8/13
- * Time: 8:23 PM
- */
-
+//
 // Let's test some global functions action
+//
 var assert = require('assert');
 
 var globalFunctions = require('../../common/globalfunctions');
 
 describe('globalFunctions', function() {
-  beforeEach(function(done) {
-    done();
-  });
 
-  afterEach(function(done) {
-    done();
-  });
-
-  it('should be undefined userId if no session', function() {
+  //
+  // Mock the request and session.  This tests our functions, not the session object.
+  //
+  it('should have undefined userId if no session', function() {
     var req = {};
     req.session = {};
     var sessionInfo = globalFunctions.getSessionInfo(req);

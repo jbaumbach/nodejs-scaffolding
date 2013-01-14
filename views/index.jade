@@ -1,3 +1,7 @@
+//-
+//- The homepage of the app.  The page is generated using a master template pattern.  
+//- See the "layout.jade" file for more details.
+//-
 extends layout
 
 //- "layout" has "content" and "sidebar" blocks that should be defined here
@@ -6,4 +10,8 @@ block content
     
 block sidebar
   .widget
+    //-
+    //- This is an example of an include.  This is similar to "user controls" in .NET webforms.
+    //- It allows you to easily reuse common bits of code in different places.
+    //-
     include includes/userWidget

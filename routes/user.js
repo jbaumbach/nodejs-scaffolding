@@ -22,7 +22,7 @@ exports.login = function(req, res) {
     
     if (user) {
       //
-      // User validated successfully
+      // User validated successfully.  
       //
       globalfunctions.loginUser(req, user.id);
       res.redirect('/');
@@ -32,10 +32,11 @@ exports.login = function(req, res) {
       // ok to re-render the page with the existing post data rather than our usual
       // redirect nonsense.
       //
+      var delayMs = 0;
       var todoAfterAShortDelay = function() {
         res.render('userLogin', { title: 'User Login', error: 'Incorrect email or password3' });
       };
-      setTimeout(todoAfterAShortDelay, 800);
+      setTimeout(todoAfterAShortDelay, delayMs);
     }
   })
 }

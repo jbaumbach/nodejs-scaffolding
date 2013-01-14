@@ -1,16 +1,42 @@
+/*
 
-/**
- * Module dependencies.
+  The one and only app.js file.
+
+  As your app grows, parts of this would probably be split out into separate files for 
+  easier long-term maintenance.
+  
+  To start the server from a terminal:
+
+    $ node app.js
+
+  To run unit tests from a terminal:
+
+    $ mocha --recursive
+
+  In the open source world, new updates are released often.  To update all the dependent
+  components:
+  
+    $ npm update
+    
+  Be sure to run all the tests after updating your components.  Something may have broken.
+  
  */
 
+//
+// These components are added by default by express.
+//
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , stylus = require('stylus')
+  
+//
+// These are additional components to make node.js easier, faster, and more fun.
+//
+var stylus = require('stylus')
   , nib = require('nib')  // Added
-  , redisStore = require('connect-redis')(express)  // Added, use "[reddis src]$ ./redis-server --loglevel verbose" to start it
+  , redisStore = require('connect-redis')(express) 
   ;
 
 var app = express();
@@ -25,6 +51,10 @@ function compile(str, path) {
       .use(nib());
 }
 
+//
+// App configuration added by express.  You may want to move this out to a separate
+// config class at some point.
+//
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -36,7 +66,7 @@ app.configure(function(){
   app.use(express.cookieParser('your cookie secret here'));
   
   //
-  // Added redis support in sessions.  
+  // Additional config for redis support in sessions.  
   //
   app.use(express.session({ store:new redisStore, secret: 'your session secret here'}));
   
@@ -58,7 +88,8 @@ app.configure('development', function(){
 });
 
 //
-// Routing table for your app
+// Routing table for your app.  In a production 
+// environment, you'd want to use SSL for any sensitive info.
 //
 app.get('/', routes.index);
 app.get('/login', user.loginForm);
@@ -69,10 +100,33 @@ app.get('/users/:id', user.detail);
 app.post('/users/', user.upsert);
 
 
+
+var startupMessage = '\r\n' +
+  '   ********************************************************\r\n' +
+  '   *\r\n' +
+  '   *  Express server listening on port ' + app.get('port') + '\r\n' +
+  '   *\r\n' +
+  '   *  Dependent on services:\r\n' +
+  '   *\r\n' +
+  '   *    MongoDB:  $ mongod -v\r\n' +
+  '   *    Redis:    $ ./redis-server --loglevel verbose\r\n' +
+  '   * \r\n' +
+  '   *  Check out your home page in a browser by going to:\r\n' +
+  '   * \r\n' +
+  '   *    http://localhost:' + app.get('port') + '\r\n' +
+  '   * \r\n' +
+  '   ********************************************************\r\n';
+
+//
+// Start the webserver and process requests.
+//
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log(startupMessage);
 });
 
+//
+// Export the app object for integration testing (see ./test/routes/testUser.js)
+//
 exports.app = function() {
   return app;
 }

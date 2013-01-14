@@ -2,6 +2,7 @@
 /*
  * GET home page.
  */
+
 var globalfunctions = require('./../common/globalfunctions');
 var userManager = require('./../data/userManager');
 

@@ -1,7 +1,7 @@
-/**
- * User: jbaumbach
- * Date: 1/2/13
- * Time: 5:33 PM
+/*
+
+  Implementation of the user manager functions using the MongoDB.
+  
  */
 
 var util = require('util')
