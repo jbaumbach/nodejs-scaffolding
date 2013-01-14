@@ -6,7 +6,7 @@
 var userManager = require('./../data/userManager');
 var util = require('util');
 var globalfunctions = require('./../common/globalfunctions');
-var User = require('./../models/user');
+var User = require('./../models/User');
 
 exports.loginForm = function(req, res) {
   var pageVars = {
