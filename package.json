@@ -11,7 +11,8 @@
     "stylus": "0.31.0",
     "connect-redis": "1.4.5",
     "mongodb": "1.2.7",
-    "nib": "0.9.0"
+    "nib": "0.9.0",
+    "connect-heroku-redis": "0.1.5"
   },
   "engines": {
     "node": "0.8.14",
