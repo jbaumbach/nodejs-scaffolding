@@ -5,43 +5,36 @@
  */
 
 var util = require('util')
-  , mongodb = require('mongodb')
+  , mongodb = require('mongodb').Db
   ;
 
 //
 // MongoDb connection parameters
 // todo: read from environment variables
 //
-var dbServerHostname = 'localhost';
-var dbServerPort = 27017;
-var dbServerOptions = { auto_reconnect: true };
-var dbConnectionOptions = { w: 1 };   // "writeconcern"; acknowledge when written to mongodb journal
-var dbName = 'nodeRolodexSample';
+var defaultConnectionUrl = 'mongodb://localhost:27017/nodeRolodexSample?w=1';
+var dbConnectionUrl = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || defaultConnectionUrl;
 
 //
 // Current status of the connection
 //
 var dbConnected = false;
+var db;
 
 //
 // Connect to the MongoDb server
-// 
-var server = new mongodb.Server(dbServerHostname, dbServerPort, dbServerOptions);
-var db = new mongodb.Db(dbName, server, dbConnectionOptions);
-
-db.open(function(err, db) {
-  //
-  // Note: 'db' return parameter intentionally ignored
-  // 
+//
+mongodb.connect(dbConnectionUrl, function(err, newDb) {
+  
+  db = newDb;
+  
   if (err) {
     console.log('MongoDB connection failed! ' + err);
   } else {
-    console.log(util.format('MongoDB connection opened: %s:%d/%s', dbServerHostname, dbServerPort, dbName));
+    console.log(util.format('MongoDB connection opened: %s', dbConnectionUrl));
     dbConnected = true;
   }
 });
-
-// todo: authenticate here as well
 
 //
 // Main export: the global database connection.  If we're not connected, throw 

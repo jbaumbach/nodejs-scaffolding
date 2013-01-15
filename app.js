@@ -13,8 +13,11 @@
 
     $ mocha --recursive
 
-  In the open source world, new updates are released often.  To update all the dependent
-  components:
+  In the open source world, new updates are released often.  To list your versions:
+  
+    $ npm list
+  
+  To update all the dependent components:
   
     $ npm update
     
