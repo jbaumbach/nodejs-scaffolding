@@ -31,7 +31,7 @@ mongodb.connect(dbConnectionUrl, function(err, newDb) {
   if (err) {
     console.log('MongoDB connection failed! ' + err);
   } else {
-    console.log(util.format('MongoDB connection opened: ' + dbConnectionUrl));
+    console.log('MongoDB connection opened: ' + dbConnectionUrl);
     dbConnected = true;
   }
 });
