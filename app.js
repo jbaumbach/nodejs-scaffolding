@@ -23,6 +23,14 @@
     
   Be sure to run all the tests after updating your components.  Something may have broken.
    
+  To run on Heroku:
+  
+    * Add all dependencies to the package.json file.  Include an "engines" section as well.
+    * Push changes to local Git repo, then push to Heroku:
+      $ git push heroku master 
+      $ heroku ps  # Gets status
+      $ heroku logs  # See what broke, if anything
+       
  */
 
 //
@@ -71,7 +79,17 @@ app.configure(function(){
   //
   // Additional config for redis support in sessions.  
   //
-  app.use(express.session({ store:new redisStore, secret: 'your session secret here'}));
+  var redisConnectOptions = {};
+  if (process.env.REDISTOGO_URL) {
+    var connectInfo = /\/\/.*:(.*):([0-9]*)\//g.exec(process.env.REDISTOGO_URL);
+    if (connectInfo.length == 3) {
+      redisConnectOptions.host = connectInfo[1];
+      redisConnectOptions.port = connectInfo[2];
+    }
+  }
+  // 
+  
+  app.use(express.session({ store:new redisStore(redisConnectOptions), secret: 'your session secret here'}));
   
   app.use(app.router);
   
