@@ -47,7 +47,7 @@ var express = require('express')
 //
 var stylus = require('stylus')
   , nib = require('nib')  // Added
-  , redisStore = require('connect-redis')(express) 
+  , HerokuRedisStore = require('connect-heroku-redis')(express);
   ;
 
 var app = express();
@@ -79,17 +79,7 @@ app.configure(function(){
   //
   // Additional config for redis support in sessions.  
   //
-  var redisConnectOptions = {};
-  if (process.env.REDISTOGO_URL) {
-    var connectInfo = /\/\/.*:(.*):([0-9]*)\//g.exec(process.env.REDISTOGO_URL);
-    if (connectInfo.length == 3) {
-      redisConnectOptions.host = connectInfo[1];
-      redisConnectOptions.port = connectInfo[2];
-    }
-  }
-  // 
-  
-  app.use(express.session({ store:new redisStore(redisConnectOptions), secret: 'your session secret here'}));
+  app.use(express.session({ store:new HerokuRedisStore, secret: 'your session secret here'}));
   
   app.use(app.router);
   
