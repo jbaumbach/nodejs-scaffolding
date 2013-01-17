@@ -1,6 +1,7 @@
 ## Node.js Scaffolding
 
-  A full-stack node.js sample application that demonstrates an architecture for building a complete production
+  Hello, and welcome.  This repository is a full-stack node.js sample application that demonstrates an 
+  architecture for building a complete production
   website with node.js.  It features an architectural demonstration of these features:
   
    * Built with Node.js and Express
