@@ -1,6 +1,6 @@
 ## Node.js Scaffolding
 
-  Hello, and welcome.  This repository is a full-stack node.js sample application that demonstrates an 
+  Hello, and welcome!  This repository is a full-stack node.js sample application that demonstrates an 
   architecture for building a complete production
   website with node.js.  It features an architectural demonstration of these features:
 
@@ -12,9 +12,9 @@
    * Data layer decoupled from application layer for easily changing databases
    * Defined classes (well, Javascript's version of a class) for application object models
    * User account create/edit, demonstrating password hashing and salting
-   * User login with sessions stored in Reddis
+   * User login with sessions stored in Redis
    * Presentation layer using layouts (e.g. "master pages" in .NET Webforms) and includes (e.g. "user controls")
-   * HTML generated using Jade rendering engine demonstrating conditionals
+   * HTML generated using Jade rendering engine, also demonstrating conditionals
    * CSS generated using Stylus rendering engine (with Nib plugin for abstracting away CSS hacks)
    * Unit and integration testing architecture with Mocha
    * HTML black box testing demonstration with Supertest
@@ -38,7 +38,7 @@
 
     $ npm install
 
- Start your MongoDb and Reddis servers (assuming these are in your path):
+ Start your MongoDb and Redis servers (assuming these are in your path):
  
     $ mongod -v
     $ ./redis-server --loglevel verbose
@@ -51,7 +51,7 @@
 
 ## Running Tests
 
- To run the test suite, execute this comment.  Note that the integration tests depending on an existing test 
+ To run the test suite, execute this command.  Note that the integration tests depend on an existing test 
  user, so be sure to create that and update the source code values.  Otherwise, some of these will bomb out:
 
     $ mocha --recursive
