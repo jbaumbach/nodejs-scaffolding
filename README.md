@@ -3,7 +3,9 @@
   Hello, and welcome.  This repository is a full-stack node.js sample application that demonstrates an 
   architecture for building a complete production
   website with node.js.  It features an architectural demonstration of these features:
-  
+
+  See the working demo [live on heroku](https://fast-stream-1638.herokuapp.com/).
+
    * Built with Node.js and Express
    * Fully commented for people coming from a Microsoft .NET/RDBMS background
    * Data layer demonstrating connecting to and storing data in MongoDb
@@ -19,8 +21,6 @@
    * Load testing your application with Nodeload
    * Deploy your app to production at Heroku
   
-  See the working demo [live on heroku](https://fast-stream-1638.herokuapp.com/).
-
 ## Quick Start
 
  The quickest way to download and start digging through code is to:
@@ -51,7 +51,8 @@
 
 ## Running Tests
 
- To run the test suite:
+ To run the test suite, execute this comment.  Note that the integration tests depending on an existing test 
+ user, so be sure to create that and update the source code values.  Otherwise, some of these will bomb out:
 
     $ mocha --recursive
 
@@ -69,6 +70,8 @@
   * Sign in with Facebook, Google and Linked In
   * Rounding out the test suite
   * Bug fixes / architectural improvements
+  * Better support for environment variables to connect to servers
+  * Add friendly 404 and 500 pages
   
 
 ## License 
