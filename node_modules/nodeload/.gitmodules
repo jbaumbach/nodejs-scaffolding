@@ -1,3 +1,0 @@
-[submodule "deps/optparse-js"]
-	path = deps/optparse-js
-	url = git://github.com/jfd/optparse-js

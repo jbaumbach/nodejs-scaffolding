@@ -8,12 +8,9 @@ lib-cov
 *.gz
 results*
 .idea
-
 pids
 logs
 results
-
-
 npm-debug.log
-
 .DS_Store
+node_modules
