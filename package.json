@@ -1,5 +1,6 @@
 {
   "name": "scaffolding",
+  "description": "A full-stack node.js sample application",
   "version": "0.1.1",
   "private": true,
   "scripts": {

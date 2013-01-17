@@ -1,0 +1,90 @@
+body{ 
+    font: 62.5% "Trebuchet MS", sans-serif; 
+}
+
+/* Base elements: background, header, main content panels
+----------------------------------------------------------*/
+.clsDarkBackground{
+    background: #6e4f1c url(pepper-grinder/images/ui-bg_diagonal-maze_20_6e4f1c_10x10.png) 50% 50% repeat;
+}
+#pnlBackground{
+    padding: 0.5%;
+    height: 100%;
+}
+
+#pnlHeader{
+    -webkit-transform: rotate(-90deg); 
+    -webkit-transform-origin: top left;
+    -moz-transform: rotate(-90deg);
+    position: absolute;
+    top: 11em;
+    font-size: 2em; font-weight: bold;
+    width:auto;
+}
+#pnlMain{
+    float: left;
+    margin-left: 3em;
+    height: 100%;
+    width: 95%;
+    padding: 1em;
+    background: #ffffff;
+}
+.clsMainRow{
+    display: inline-block;
+    margin-bottom: 1em;
+    width:100%;
+}
+
+/* Nodes header bar
+----------------------------------------------------------*/
+.clsToolbar{
+    padding: 0px 6px;
+}
+#frmAddNode{
+    position: absolute;
+    display: none;
+    padding: 5px;
+    z-index: 1;
+}
+
+/* Tabs area
+----------------------------------------------------------*/
+#pnlCharts{
+    float: left;
+    width: 75%; height: 100%;
+}
+.clsChartContainer{
+    position:relative;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+.clsChartLegend{
+    position:absolute;
+    display:block;
+    top:0px;
+    right: 0px; 
+}
+
+/* Summary and details area (right column)
+----------------------------------------------------------*/
+#pnlRightColumn{
+    float: right;
+    width: 24%; height: 100%;
+}
+#pnlSummary{
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+#pnlSummary table{
+    font-variant: small-caps;
+    border-spacing: 10px 1px;
+}
+
+
+/* Miscellaneous
+----------------------------------------------------------*/
+.clsShortcutKeys {
+    float: right;
+    color: gray;
+    margin: 2px 5px 0px 0px;
+}

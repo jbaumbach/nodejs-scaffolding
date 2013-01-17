@@ -23,13 +23,14 @@
     
   Be sure to run all the tests after updating your components.  Something may have broken.
    
-  To run on Heroku:
+  To run on Heroku, follow the node.js guide to set up git, install MongoDb and Redis, then:
   
-    * Add all dependencies to the package.json file.  Include an "engines" section as well.
+    * Make sure all dependencies are in the package.json file.  Include an "engines" section as well.
     * Push changes to local Git repo, then push to Heroku:
+      
       $ git push heroku master 
-      $ heroku ps  # Gets status
-      $ heroku logs  # See what broke, if anything
+      $ heroku ps     # Gets status
+      $ heroku logs   # See what broke, if anything
        
  */
 

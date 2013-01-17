@@ -32,6 +32,7 @@ var nl = require('nodeload')
   , secondsToRun = 120
   , totalRequests = 0
   , concurrentConns = 5
+  , knownUserId = '50f1ebc3dd71688aad448b62';
   ;
 
 var loadtest = nl.run({
@@ -75,7 +76,7 @@ var loadtest = nl.run({
         //
         // The id of an existant user in the database
         //
-        request = client.request('GET', "/users/50f1ebc3dd71688aad448b62");
+        request = client.request('GET', "/users/" + knownUserId);
         break;
       default:
         request = client.request('GET', '/users/' + Math.floor(Math.random()*10000));

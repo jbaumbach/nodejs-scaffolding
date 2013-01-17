@@ -1,0 +1,28 @@
+- Console
+    - Update test spec on real data
+    - Adding a master node should add its slaves
+    - Really "add" a node (ping and connect to it)
+    - Running / stopped indicators for each node 
+    - Start & stop any node
+    - Fire up nodeload on a new machine
+    - Send a test script to run on any node
+    - Interactive console for each node 
+    - Edit test spec and "restart" (stop existing jobs / start updated test)
+    - Clean up removed nodes properly
+    - Download data as csv
+- Console webpage (stats)
+- Console webpage (node manager)
+- Add mem, disk io read + write + wait monitoring
+- Remote testing should also aggregate summary-only stats (e.g. uniques)
+- Use stats.StatsGroup in monitoring and remote
+- Update READMEs
+- Write a DEVELOPERS doc that explains the components
+- Add zipf number generator
+- Download/copy data in CSV
+- Allow output directory to be customized
+- Add support for bar graphs
+- Methods for graphing histograms
+- Allow graphs to be overlayed
+- Use agents for concurrent connections
+- Label Y axes
+- Add customizable notes section to summary page
