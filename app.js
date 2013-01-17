@@ -17,7 +17,7 @@
   
     $ npm list
   
-  To update all the dependent components:
+  To install/update components (all the dependencies in package.json):
   
     $ npm update
     
@@ -26,12 +26,13 @@
   To run on Heroku, follow the node.js guide to set up git, install MongoDb and Redis, then:
   
     * Make sure all dependencies are in the package.json file.  Include an "engines" section as well.
-    * Push changes to local Git repo, then push to Heroku:
+    * Commit changes to local Git repo, then push to Heroku:
       
       $ git push heroku master 
       $ heroku ps     # Gets status
       $ heroku logs   # See what broke, if anything
        
+      $ git push github master (assuming you've added 'github' as a remote)
  */
 
 //
