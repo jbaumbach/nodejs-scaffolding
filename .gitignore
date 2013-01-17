@@ -7,10 +7,10 @@ lib-cov
 *.pid
 *.gz
 results*
+npm-debug.log
+.DS_Store
 .idea
 pids
 logs
 results
-npm-debug.log
-.DS_Store
 node_modules
