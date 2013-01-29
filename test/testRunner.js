@@ -20,7 +20,7 @@
 //
 // Add the test file(s) you want to debug here.
 //
-var testFiles = ["./test/routes/testUser.js"];
+var testFiles = ["./test/routes/testUser.js", "./test/common/testAuthorization.js"];
 
 var Mocha = require('mocha');
 var mocha = new Mocha;

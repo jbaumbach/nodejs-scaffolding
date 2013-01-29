@@ -41,8 +41,10 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , userApi = require('./routesapi/userapi')
   , http = require('http')
   , path = require('path')
+  , auth = require('./common/authorization')
   
 //
 // These are additional components to make node.js easier, faster, and more fun.
@@ -113,7 +115,12 @@ app.get('/users/:id', user.detail);
 app.post('/users/', user.upsert);
 
 
+//
+// Routing table for your REST API
+//
+app.get('/apiv1/users', auth.authorize, userApi.list);
 
+ 
 var startupMessage = '\r\n' +
   '   ********************************************************\r\n' +
   '   *\r\n' +

@@ -15,7 +15,7 @@
    * User login with sessions stored in Redis
    * Presentation layer using layouts (e.g. "master pages" in .NET Webforms) and includes (e.g. "user controls")
    * HTML generated using Jade rendering engine, also demonstrating conditionals
-   * CSS generated using Stylus rendering engine (with Nib plugin for abstracting away CSS hacks)
+   * CSS generated using Stylus rendering engine (with Nib plugin for abstracting away CSS hacks, thank you http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus)
    * Unit and integration testing architecture with Mocha
    * HTML black box testing demonstration with Supertest
    * Load testing your application with Nodeload
@@ -72,7 +72,7 @@
   * Bug fixes / architectural improvements
   * Better support for environment variables to connect to servers
   * Add friendly 404 and 500 pages
-  
+  * Continuous integration build server
 
 ## License 
 
