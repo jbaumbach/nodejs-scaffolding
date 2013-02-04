@@ -12,7 +12,7 @@ exports.index = function(req, res) {
 
   var pageVars =
   {
-    title: 'API Documentation',
+    title: 'API Documentation'
   };
 
   var sessionInfo = globalfunctions.getSessionInfo(req);
