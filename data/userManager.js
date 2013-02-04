@@ -17,7 +17,7 @@
 // mongo by default now.
 //  
 var db = require('./drivers/mongoUserManager')
-  , globalFunctions = require('../common/globalFunctions')
+  , globalFunctions = require('../common/globalfunctions')
   , thisModule = this
 ;
 
