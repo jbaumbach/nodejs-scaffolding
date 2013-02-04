@@ -5,6 +5,15 @@
 extends layout
 
 block content
+  h2 
+    - if (user.id.length > 0)
+      | Edit Your Profile 
+    - else
+      | Add User 
+  
+  //-
+  //- The user id is grabbed from the session when "post"-ed
+  //-
   form(method='post', action='/users/')
     ul
       li
@@ -24,3 +33,22 @@ block content
         input(type='password', name='pw2', value=user.password)
       li
         input(type='submit', value='Boom')
+
+  h2 API Settings
+  div(class='apisettings') 
+    - if (user.id.length > 0)
+      - if (apiuser.id.length > 0)
+        ul
+          li
+            span ApiKey
+            | #{apiuser.apiKey}
+          li
+            span Password
+            | #{apiuser.password}
+      - else
+        p Please 
+          a(href='/users/' + user.id + '?action=createapikey') click here 
+          | to create an api key.
+    - else
+      p Please login or create a user account to access the API.  
+        
