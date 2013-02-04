@@ -32,7 +32,7 @@
 
  Download the source code:
 
-    $ git clone git://github.com/lavamantis/nodejs-scaffolding.git
+    $ git clone git://github.com/jbaumbach/nodejs-scaffolding.git
 
  Install dependencies:
 
@@ -54,7 +54,7 @@
  To run the test suite, execute this command.  Note that the integration tests depend on an existing test 
  user, so be sure to create that and update the source code values.  Otherwise, some of these will bomb out:
 
-    $ mocha --recursive
+    $ mocha --recursive --reporter spec
 
  To run the load test (runs for 2 minutes):
 
