@@ -1,0 +1,28 @@
+//-
+//- API documentation.  See "index.jade" for more details.
+//-
+extends layout
+
+block content
+  //- todo: non-hack CSS for a page w/out sidebar.  Adding a big div inside a small
+  //- one is just awful. 
+  .api-documentation
+    h2 API Documentation
+    //-
+    //- The controller passes a list of operation objects with these properties, and
+    //- the page outputs them all.  This is like a "repeater" in .NET webforms.
+    //-
+    each operation in operations
+      h3(class="title")= operation.title
+      p(class="description")= operation.description
+      p(class="signature") Signature: 
+        span #{ operation.signature }
+      p(class="authentication") Authentication:
+        | #{ operation.authentication }
+      p Try it:
+      p(class="tryit")
+        | #{ operation.tryit }
+      - if (apiUser.id.length === 0)
+        p (
+          a(href="/login") Login 
+          | to have the key values populated for you)
