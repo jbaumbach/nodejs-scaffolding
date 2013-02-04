@@ -6,7 +6,8 @@
 var userManager = require('./../data/userManager');
 var util = require('util');
 var globalfunctions = require('./../common/globalfunctions');
-var User = require('./../models/User');
+var User = require('../models/User');
+var ApiUser = require('../models/ApiUser');
 
 exports.loginForm = function(req, res) {
   var pageVars = {
@@ -66,12 +67,33 @@ exports.detail = function(req, res) {
         // Must reenter password in this version of the site.
         //
         user.password = '';
-        var pageVars = {
-          title: 'Edit Profile',
-          user: user
-        }
         
-        res.render('userAddEdit', pageVars);
+        //
+        // This may or may not be an example of a "closure" in Javascript.  The 
+        // consensus seems to be that's when a function inside another function 
+        // uses local variables from the outside function.  This can cause 
+        // memory leaks in some circumstances, so be careful.
+        //
+        var renderPage = function(apiUser) {
+
+          apiUser = apiUser || new ApiUser();
+
+          var pageVars = {
+            title: 'Edit Profile',
+            user: user,
+            apiuser: apiUser
+          }
+
+          res.render('userAddEdit', pageVars);
+        }
+
+        var action = req.param('action');
+
+        if (action === 'createapikey') {
+          userManager.upsertApiUser(new ApiUser( { associatedUserId: user.id } ), renderPage);
+        } else {
+          userManager.getApiUserByUserId(sessionInfo.userId, renderPage);
+        }
         
       } else {
         throw 'Viewing other users not implemented';
