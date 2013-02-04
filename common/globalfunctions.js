@@ -4,6 +4,10 @@
   
  */
 
+var util = require('util')
+  , thisModule = this
+  ;
+
 //
 // Return the current session info object.  Note, if the redis server isn't running or
 // can't be connected to, this will throw an error.
@@ -79,5 +83,32 @@ exports.hashPassword = function(password) {
 
   var result = crypto.createHash('sha256').update(salt + password).digest('hex');
 
+  return result;
+}
+
+exports.sha256Encode = function(stringToEncode) {
+
+  var crypto = require('crypto');
+  var result = crypto.createHash('sha256').update(stringToEncode).digest('hex');
+
+  return result;
+}
+
+exports.md5Encode = function(stringToEncode) {
+
+  var crypto = require('crypto');
+  var result = crypto.createHash('md5').update(stringToEncode).digest('hex');
+
+  return result;
+}
+
+exports.generateUniqueCredentials = function(uniqueValue) {
+
+  var result = {};
+  var anotherUniqueVal = util.format('%s andsomeothercharacters', uniqueValue);
+
+  result.uid = thisModule.md5Encode(uniqueValue);
+  result.password = thisModule.md5Encode(anotherUniqueVal);
+  
   return result;
 }
