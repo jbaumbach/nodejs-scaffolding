@@ -1,7 +1,7 @@
 /**
  * Defines properties for an api user.  
  * 
- * See architecture notes in "user.js"
+ * See architecture notes in "user.js"...
  */
 
 var ApiUser = function(values) {
