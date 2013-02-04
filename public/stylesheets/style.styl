@@ -1,4 +1,10 @@
 /*
+ * "Stylus" CSS source file.  
+ *
+ * Based on original tutorial here:
+ *
+ * http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
+ *
  * Import nib
  */
 @import 'nib'
@@ -25,6 +31,7 @@ background-color = #031B34
 text-color = white
 link-color = #50708E
 error-color = #DBB174
+error-color-contrast = #693104
 
 a:link, a:visited 
   color link-color
@@ -37,9 +44,19 @@ body
   background-color background-color
   color text-color
 
+h2
+  color text-color
+  font-size 1.25em
+  padding 0 0 10px 0
+  
+form
+  padding 0 0 20px 0
+  
 header
   font-family 'Quicksand'
   padding 50px 10px
+  a:link, a:visited 
+    color #fff
   color #fff
   font-size 25px
   text-align center
@@ -102,7 +119,7 @@ header
   color error-color
 
 p
-  line-height 1.8
+  line-height 1.6
 
 footer
   width 500px
@@ -111,3 +128,36 @@ footer
   padding-top 5px
   font-size 13px
   
+div.apisettings
+  color error-color
+  font-family 'Courier'
+  font-size .9 em
+  width 500px
+  span 
+    color text-color
+    display inline-block;
+    width 100px;
+    font-family 'Georgia'
+  li
+    height 22px
+    
+.api-documentation
+  p
+    margin-bottom 5px
+  width 500px
+  .title
+    color main-color
+  .description
+    font-size .8em
+  .signature
+    span
+      color main-color
+      font-family 'Courier'
+  .tryit
+    font-family 'Courier'
+    font-size .8em
+    background error-color
+    color error-color-contrast
+    padding 15px
+    border-radius 5px
+    border 1px solid #ccc

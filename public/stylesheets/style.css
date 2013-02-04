@@ -8,7 +8,10 @@ a img{border:none}
 a:link,a:visited{color:#50708e;text-decoration:none}
 a:hover{text-decoration:underline}
 body{font-family:'Georgia';background-color:#031b34;color:#fff}
+h2{color:#fff;font-size:1.25em;padding:0 0 10px 0}
+form{padding:0 0 20px 0}
 header{font-family:'Quicksand';padding:50px 10px;color:#fff;font-size:25px;text-align:center;background-color:#50708e;border-bottom:1px solid #384e63;text-shadow:0 -1px 0 #384e63}
+header a:link,header a:visited{color:#fff}
 .container{width:500px;margin:50px auto;overflow:hidden}
 .main-content{float:left;width:300px;}
 .main-content p{margin-bottom:20px}
@@ -18,5 +21,14 @@ header{font-family:'Quicksand';padding:50px 10px;color:#fff;font-size:25px;text-
 .sidebar .widget h1{font-family:'Quicksand';margin:13px 10px 4px;padding-bottom:10px;border-bottom:1px dotted #ddd;-webkit-border-radius:2px 2px 0 0;border-radius:2px 2px 0 0;margin-bottom:10px}
 .sidebar .widget p{font-size:13px;padding:0 10px;margin-bottom:10px}
 .error{color:#dbb174}
-p{line-height:1.8}
+p{line-height:1.6}
 footer{width:500px;margin:50px auto;border-top:1px dotted #ccc;padding-top:5px;font-size:13px}
+div.apisettings{color:#dbb174;font-family:'Courier';font-size:.9em;width:500px;}
+div.apisettings span{color:#fff;display:inline-block;width:100px;font-family:'Georgia'}
+div.apisettings li{height:22px}
+.api-documentation{width:500px;}
+.api-documentation p{margin-bottom:5px}
+.api-documentation .title{color:#50708e}
+.api-documentation .description{font-size:.8em}
+.api-documentation .signature span{color:#50708e;font-family:'Courier'}
+.api-documentation .tryit{font-family:'Courier';font-size:.8em;background:#dbb174;color:#693104;padding:15px;-webkit-border-radius:5px;border-radius:5px;border:1px solid #ccc}
