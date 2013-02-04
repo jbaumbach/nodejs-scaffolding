@@ -99,6 +99,10 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+//
+// todo: implement config files: http://stackoverflow.com/questions/5869216/how-to-store-node-js-deployment-settings-configuration-files
+//
+
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
