@@ -44,7 +44,7 @@
  */
   
   
-var globalFunctions = require('./globalFunctions')
+var globalFunctions = require('./globalfunctions')
   , userManager = require('../data/userManager')
   , util = require('util')
   , thisModule = this
