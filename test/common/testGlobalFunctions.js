@@ -68,4 +68,18 @@ describe('globalFunctions', function() {
     assert.equal(hashedPw, hashedPw2, 'Hash not reproducible');
   });
   
+  it('should generate unique id and pw vals from seed value', function() {
+    
+    var uniqueVal = 'uggabugga';
+    var res = globalFunctions.generateUniqueCredentials(uniqueVal);
+    var expectedPWLength = 32;
+    
+    assert.notEqual(uniqueVal, res.uid, 'UID not unique');
+    assert.notEqual(uniqueVal, res.password, 'PW not unique');
+    assert.notEqual(res.uid, res.password, 'UID is same as password!');
+    
+    assert.equal(expectedPWLength, res.uid.length, 'UID not ' + expectedPWLength + ' chars in length');
+    assert.equal(expectedPWLength, res.password.length, 'PW not ' + expectedPWLength + ' chars in length');
+    
+  });
 })
