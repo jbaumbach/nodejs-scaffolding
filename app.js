@@ -42,6 +42,7 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , userApi = require('./routesapi/userapi')
+  , documentation = require('./routesapi/documentation')
   , http = require('http')
   , path = require('path')
   , auth = require('./common/authorization')
@@ -114,11 +115,12 @@ app.get('/users/new', user.new);
 app.get('/users/:id', user.detail);
 app.post('/users/', user.upsert);
 
-
 //
 // Routing table for your REST API
 //
+app.get('/api/documentation', documentation.index);
 app.get('/apiv1/users', auth.authorize, userApi.list);
+// app.get('/apiv1/users', auth.testAlso, userApi.list);
 
  
 var startupMessage = '\r\n' +
