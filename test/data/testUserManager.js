@@ -12,6 +12,8 @@
 var assert = require('assert');
 var userManager = require('../../data/userManager');
 var db = require('../../data/connectors/mongo');
+var ApiUser = require('../../models/ApiUser');
+var User = require('../../models/User');
 
 //
 // For the "existing user" test(s) to work, create this user in your interface so it 
@@ -126,4 +128,42 @@ describe('userManager', function() {
       });
     });
   })
-})
+
+  //
+  // This tests the full cycle of CRUD actions for an api user, and cleans up afterwards.
+  //
+  it('should insert, get (two ways), then delete an api user', function (done) {
+    var expectedPWLength = 32;
+    var apiUser = new ApiUser();
+
+    apiUser.associatedUserId = existingUserId;
+
+    userManager.upsertApiUser(apiUser, function (upsertedApiUser) {
+
+      var newApiKey = upsertedApiUser.apiKey;
+      var newApiPW = upsertedApiUser.password;
+
+      assert.equal(expectedPWLength, newApiKey.length, 'New api key not right length');
+      assert.equal(expectedPWLength, newApiPW.length, 'New api pw not right length');
+
+      userManager.getApiUser(newApiKey, function (gottenUser) {
+
+        assert.equal(newApiPW, gottenUser.password, 'Wrong password after get');
+
+        userManager.getApiUserByUserId(existingUserId, function(gotten2User) {
+
+          assert.equal(newApiPW, gotten2User.password, 'Wrong password after get by uid');
+          
+          userManager.deleteApiUser(newApiKey, function (err) {
+            assert.equal(err, undefined, 'Delete user had error');
+
+            done();
+          })
+        })
+      })
+    })
+  });
+
+  // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  // All new tests should go above this line
+});
