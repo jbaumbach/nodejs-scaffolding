@@ -86,7 +86,7 @@ describe('api authorization', function() {
     userManager.getApiUser = function(apiKey, resultCallback) {
       
       assert.equal(sampleApiKey, apiKey, 'api key not properly extracted from header');
-      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: 'hello' } );
+      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: samplePw } );
       
       resultCallback(apiUser);
     };
@@ -139,7 +139,7 @@ describe('api authorization', function() {
     userManager.getApiUser = function(apiKey, resultCallback) {
 
       assert.equal(sampleApiKey, apiKey, 'api key not properly extracted from header');
-      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: 'hello' } );
+      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: samplePw } );
 
       resultCallback(apiUser);
     };
@@ -193,7 +193,7 @@ describe('api authorization', function() {
     userManager.getApiUser = function(apiKey, resultCallback) {
 
       assert.equal(badApiKey, apiKey, 'api key not properly extracted from header');
-      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: 'hello' } );
+      var apiUser = new ApiUser( { apiKey: sampleApiKey, password: samplePw } );
 
       resultCallback(apiUser);
     };
