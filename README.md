@@ -4,9 +4,8 @@
   architecture for building a complete production
   website with node.js.  It features an architectural demonstration of these features:
 
-  See the working demo [live on heroku](https://fast-stream-1638.herokuapp.com/).
-
    * Built with Node.js and Express
+   * REST API with authentication scheme
    * Fully commented for people coming from a Microsoft .NET/RDBMS background
    * Data layer demonstrating connecting to and storing data in MongoDb
    * Data layer decoupled from application layer for easily changing databases
@@ -20,7 +19,9 @@
    * HTML black box testing demonstration with Supertest
    * Load testing your application with Nodeload
    * Deploy your app to production at Heroku
-  
+
+  See the working demo [live on heroku](https://fast-stream-1638.herokuapp.com/).
+
 ## Quick Start
 
  The quickest way to download and start digging through code is to:
@@ -65,7 +66,6 @@
  Here are future additions to the framework.  Any help would be appreciated!
  
   * Converting the HTML to a responsive design with comments
-  * Adding a REST API (with signed urls) with auto-generated developer documentation
   * iOS, Android, and Windows Phone sample apps demonstrating usage of the API
   * Sign in with Facebook, Google and Linked In
   * Rounding out the test suite
